@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "proj4js@2.6.1",
+      "destination": "lib/proj4js/"
+    }
+  ]
+}

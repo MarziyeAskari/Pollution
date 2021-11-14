@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="padding-left:0px;padding-right:0px">
+            <div class="col-md-3" id="info" style="padding:15px">
+                <table id="formTool">
+                    <tr>
+                        <td>From:</td>
+                        <td><input class="coordinate" id="orgCoordinate" placeholder="start point coordinate" disabled /></td>
+                        <td id="btnStart" title="select your origin!" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-map-marker"></span></td>
+                    </tr>
+                    <tr>
+                        <td>To:</td>
+                        <td><input class="coordinate" id="distCoordinate" placeholder="end point coordinate" disabled /></td>
+                        <td id="btnDist" title="select your distination!" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-map-marker"></span></td>
+                    </tr>
+                </table>
+
+                <div id="typeRun" >
+                    <button data-type="walking" class=" btn btn-info travel-mode" title=" walking" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-male"></span></button>
+                    <button data-type="byBicycle" class=" btn btn-basic travel-mode" title="bicycle!" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-bicycle"></span></button>
+                    <button id="Go" class=" btn btn-info " title="Go" data-placement="bottom" data-toggle="tooltip" style="position:absolute;right:15px;"><span class="fa fa-play"></span></button>
+                </div>
+
+                <div id="map-result"></div>
+
+                <div style="position:absolute;bottom:10px">
+                    <table>
+                        <tr>
+                            <td rowspan="2" style="width:35px;font-size:35px;" ><span class="fa fa-user"></span></td>
+                            <td><a>Log In</a></td>
+                        </tr>
+                        <tr><td><a>Sign In</a></td></tr>
+                        <tr><td colspan="2"><a>My exposure statsitics</a></td></tr>
+                        <tr><td colspan="2"><a>Health Effects</a></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-9" id="map">
+                <div id="title">
+                    <span></span>
+                </div>
+            </div>
+
+
+        </div>
+
+        @*
+            <div id="map-pane">
+                <div id="map-tools">
+                    <button id="btnStart" class=" btn btn-success" title="select your origin!" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-map-marker"></span></button>
+                    <button id="btnDist" class="btn btn-danger " title="select your distination!" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-map-marker"></span></button>
+                    <button id="driving" class=" btn btn-primary " title="Driving!" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-automobile"></span></button>
+                    <button id="byBus" class=" btn btn-primary " title="Try by bus!" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-bus"></span></button>
+                    <button id="byBicycle" class=" btn btn-info " title="Try by bicycle!" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-bicycle"></span></button>
+                    <button id="walking" class=" btn btn-info " title="Try to walking" data-placement="bottom" data-toggle="tooltip"><span class="fa fa-male"></span></button>
+                </div>
+                <div id="map"></div>
+
+            </div>*@
+
+
+
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/map")
+}
